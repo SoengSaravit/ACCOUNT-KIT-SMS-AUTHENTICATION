@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+    <h1>Success!</h1>
+    <hr/>
+    <h3>User Info</h3>
+    <p th:inline="text">User's ID: [[${PHONEUSER.user_id}]]</p>
+    <p th:inline="text">Phone Number: [[${PHONEUSER.phone_number}]]</p>
+    <p th:inline="text">Access Token: [[${PHONEUSER.access_token}]]</p>
+</body>
+</html>

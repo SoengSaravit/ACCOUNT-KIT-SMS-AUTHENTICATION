@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS Authentication</title>
+    <script th:src="@{/static/js/sms-login.js}"></script>
+    <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+
+</head>
+<body>
+    <input value="+855" id="country_code" /> <br/><br/>
+    <input placeholder="phone number" id="phone_number"/><br/><br/>
+    <button onclick="smsLogin();">Login via SMS</button>
+
+    <form id="login_success" method="post" th:object="${AKPost}" th:action="@{/login_success}">
+        <input id="csrf" type="hidden" name="csrf" th:field="*{csrf}"/>
+        <input id="code" type="hidden" name="code" th:field="*{code}"/>
+    </form>
+</body>
+</html>
