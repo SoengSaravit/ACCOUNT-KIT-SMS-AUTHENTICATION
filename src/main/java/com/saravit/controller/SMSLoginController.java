@@ -62,7 +62,7 @@ public class SMSLoginController {
         PhoneUser pu = new PhoneUser();
         pu.setUser_id(user_id);
         pu.setPhone_number(number);
-        pu.setAccess_token(user_access_token);s
+        pu.setAccess_token(user_access_token);
 
         model.addAttribute("PHONEUSER",pu);
 
